@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - id: auth
-        uses: google-github-actions/auth@v2
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
         with:
-          credential_json: ${{ secrets.GCP_CREDENTIALS }}
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: Setup Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
 
-      - name: Use gcloud CLI
-        run: gloud info
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
 
       - name: Check out code
         uses: actions/checkout@v4
