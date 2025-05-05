@@ -29,7 +29,8 @@ jobs:
 
   style:
     name: Style
-    uns-on: ubuntu-latest
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checks out code
         uses: actions/checkout@v4
